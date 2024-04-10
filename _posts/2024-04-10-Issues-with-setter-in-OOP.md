@@ -170,7 +170,8 @@ public class Book{
 
 ## 가변성의 문제점
 
-#### 1. side effect (부작용)
+### 1. side effect (부작용)
+
 **[typeA]**
 ```java
 public String post (Request request) {
@@ -222,7 +223,7 @@ String second = r.fetch();
 
 typeB 코드를 보시게 되면 어떻게 사용했는지 알 수 있습니다. .withMethod("POST")라는 메서드로 새로운 객체를 생성하기 때문에 생성된 request 객체는 변경되지 않습니다.
 
-#### 2. Thread safety (쓰레드 안전성)
+### 2. Thread safety (쓰레드 안전성)
 
 **[typeA]**
 ```java
@@ -269,7 +270,7 @@ public class Books {
 
 객체가 변경 가능하다면 동시성 문제가 발생하게 되어 문제를 해결하기 어렵게 됩니다. 이를 해결하기 위해 가장 쉬운 방법은 클래스를 불변으로 만드는 겁니다.
 
-#### 3. Temporal Coupling
+### 3. Temporal Coupling
 
 Temporal Coupling
 
