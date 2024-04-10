@@ -13,22 +13,11 @@ tags:
   - 객체 지향 프로그래밍
 ---
 
-<style>
-@font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-body {
-   font-family: 'NanumSquareNeo-Variable', sans-serif;
-   font-weight: normal; /* 볼드를 더 낮게 설정 */
-   font-style: normal; /* 기울임체 해제 */
-}
-</style>
+setter를 왜 사용하면 안되는지, 그리고 setter를 사용하지 않고 얻을 수 있는 이점들을 소개하려고 합니다. <br>
 
-setter를 왜 사용하면 안되는지, 그리고 setter를 사용하지 않고 얻을 수 있는 이점들을 소개하려고 합니다.
 여기서 setter는 꽤 흥미로운 주제를 가지고 있는데 가변성이라고 불리는 꽤 큰 문제에 대한 문을 열어주기 때문입니다.
+
+
 
 # OOP (Object-Oriented-Programing)의 문제 setter편
 
