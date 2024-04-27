@@ -1,7 +1,7 @@
 ---
-title: Issues with Setters in Object-Oriented Programming (OOP)
-permalink: /posts/2024/04/Issues-with-setter-in-OOP/
-date: 2024-04-10
+title: Issues with Reflection in Object-Oriented Programming (OOP)
+permalink: /posts/2024/04/Issues-with-reflection-in-OOP/
+date: 2024-04-27
 tags:
   - OOP
   - Reflection
