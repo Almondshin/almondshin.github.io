@@ -50,12 +50,14 @@ entityManager.remove(member);
 ### 3. 유지보수
 
 기존 필드를 변경할 때 모든 SQL을 수정할 필요 없이 엔티티 클래스만 수정하면 됩니다.
+
 ```java
 public class Member {
     private String memberId;
     private String name; // < 추가
 }
 ```
+
 ### 4. 패러다임의 불일치 해결
 
 객체와 관계형 데이터베이스 간의 패러다임 불일치를 해결하여, 객체 지향적인 코드를 작성할 수 있습니다.
@@ -83,27 +85,27 @@ EntityManager는 JPA의 핵심 인터페이스로, 엔티티를 관리하고 데
 1. **엔티티의 생명 주기 관리**: 엔티티를 영속성 컨텍스트에 포함시키거나 제외시킬 수 있습니다.
 2. **트랜잭션 관리**: 엔티티의 상태를 변경하고 데이터베이스에 반영하는 트랜잭션을 시작하고 종료할 수 있습니다.
 3. **쿼리 실행**: JPQL(Java Persistence Query Language)을 사용하여 데이터베이스에 질의를 수행할 수 있습니다.
-4.
+
+
 ```java
-// EntityManager
-EntityManager entityManager = entityManagerFactory.createEntityManager();
-entityManager.getTransaction().begin();
-
-// 엔티티 저장
-entityManager.persist(newEntity);
-
-// 엔티티 조회
-MyEntity entity = entityManager.find(MyEntity.class, entityId);
-
-// 엔티티 수정
-entity.setName("newName");
-
-// 엔티티 삭제
-entityManager.remove(entity);
-
-entityManager.getTransaction().commit();
-entityManager.close();
-
+    // EntityManager
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    entityManager.getTransaction().begin();
+    
+    // 엔티티 저장
+    entityManager.persist(newEntity);
+    
+    // 엔티티 조회
+    MyEntity entity = entityManager.find(MyEntity.class, entityId);
+    
+    // 엔티티 수정
+    entity.setName("newName");
+    
+    // 엔티티 삭제
+    entityManager.remove(entity);
+    
+    entityManager.getTransaction().commit();
+    entityManager.close();
 ```
 
 ---
@@ -116,11 +118,13 @@ JPA는 객체 지향적인 개발을 가능하게 하고 생산성을 높이기 
 
 Spring Data JPA는 JPA를 더욱 편리하게 사용하기 위한 라이브러리로, 복잡한 데이터 접근 로직을 간소화하고 표준화된 방법으로 처리할 수 있게 해줍니다. Spring Data JPA를 사용하면 기본적인 CRUD 작업은 물론, 복잡한 쿼리 작성도 간단해집니다.
 
+
 ```java
 public interface MemberRepository extends JpaRepository<Member, Long> {
     List<Member> findByLastName(String lastName);
 }
 ```
+
 이처럼 JpaRepository 인터페이스를 상속받아 간단한 메소드 선언만으로 다양한 쿼리를 작성할 수 있습니다. 또한, Spring Data JPA는 자동으로 트랜잭션 관리를 해주기 때문에 개발자가 직접 트랜잭션을 처리할 필요가 없습니다.
 
 ---
@@ -156,6 +160,7 @@ Spring Data JPA는 데이터 접근 로직과 비즈니스 로직을 명확하�
 ## 엔티티 수정과 변경 감지
 
 JPA는 엔티티의 변경 사항을 자동으로 감지하고, 트랜잭션이 커밋되는 시점에 해당 변경 사항을 데이터베이스에 반영하는 기능을 제공합니다. 이를 변경 감지(Dirty Checking)라고 합니다.
+
 
 ```java
 @Transactional
