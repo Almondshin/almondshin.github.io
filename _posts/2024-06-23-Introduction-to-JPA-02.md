@@ -7,6 +7,8 @@ tags:
   - JPA
   - EntityManager
   - Annotation
+  - Entity
+  - Catalog
 ---
 
 JPA의 세 가지 핵심 측면인 객체-테이블 매핑, 필드-컬럼 매핑, 기본 키 매핑에 대해 알아보려고 합니다.
