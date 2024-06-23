@@ -35,7 +35,7 @@ Java Persistence API(JPA)는 Java 애플리케이션에서 관계형 데이터�
 - **@Entity**: 이 애노테이션은 클래스를 엔티티로 표시합니다.
 - **@Table**: 엔티티가 매핑되는 데이터베이스의 테이블을 지정합니다. 지정하지 않을경우 클래스 네임으로 됩니다.
 
-```java fold title:"객체-테이블 매핑"
+```java
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -117,7 +117,7 @@ MySQL에서는 3계층 구조를 사용하므로 카탈로그 계층 없이 인�
 
 - **@Column**: 필드를 데이터베이스의 컬럼에 매핑합니다.
 
-```java fold title:"필드-컬럼 매핑"
+```java
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -178,7 +178,7 @@ public class User {
 - **GenerationType.SEQUENCE**: 데이터베이스 시퀀스를 사용하여 기본 키 값을 생성합니다. 이 경우 시퀀스를 정의해야 합니다.
 - **GenerationType.TABLE**: 키 값을 생성하기 위해 별도의 키 생성 테이블을 사용합니다.
 
-```java fold title:"기본 키 매핑"
+```java 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
