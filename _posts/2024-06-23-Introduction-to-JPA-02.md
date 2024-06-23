@@ -1,4 +1,4 @@
-<hr>
+---
 title: Introduction to JPA 02
 permalink: /posts/2024/06/2024-06-23-Introduction-to-JPA-02/
 date: 2024-06-23
@@ -7,7 +7,7 @@ tags:
   - JPA
   - EntityManager
   - Annotation
-<hr>
+---
 
 JPA의 세 가지 핵심 측면인 객체-테이블 매핑, 필드-컬럼 매핑, 기본 키 매핑에 대해 알아보려고 합니다.
 
